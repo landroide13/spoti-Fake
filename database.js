@@ -1,5 +1,5 @@
 //DB
-const spoti1 = 'spoti1';
+const spoti1 = 'spotifake';
 
 //Mongoose Connection
 mongoose.connect(`mongodb://localhost:27017/${spoti1}`)
