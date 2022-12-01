@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { verifyToken, isAnAdmin } = require('../middleware/authjwt');
-const { createUser } = require('../controllers/user.controller');
+const { verifyToken } = require('../middleware/authjwt');
+const { getUsers, getUser } = require('../controllers/user.controller');
 
-router.post("/", verifyToken, createUser);
+router.get("/", verifyToken, getUsers );
+router.get("/:id", verifyToken, getUser );
 
 
 

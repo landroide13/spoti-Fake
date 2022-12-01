@@ -13,7 +13,6 @@ exports.getAudiobooks = async(req, res) =>{
     res.status(200).json(audios);
 }
 
-
 exports.getAudiobook = async(req, res) =>{
     const audio = await Audio.findById(req.params.id)
     res.status(200).json(audio);
@@ -24,8 +23,9 @@ exports.updateAudiobook = async(req, res) =>{
     res.status(200).json(updateAudio);
 }
 
-
 exports.deleteAudiobook = async(req, res) =>{
     await Audio.findByIdAndDelete(req.params.id);
     res.status(204).json();
 }
+
+

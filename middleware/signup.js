@@ -1,12 +1,5 @@
 const User = require("../models/user");
 
-exports.checkRole = async(req, res, next) =>{
-   /* if(req.body.role){
-
-    } */
-    next();
-}
-
 
 exports.verifyDuplicatedUser = async(req, res, next) =>{
     const user = await User.findOne({ username: req.body.username });
