@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { verifyToken, isAnAdmin } = require('../middleware/authjwt');
-const { createUser } = require('../controllers/users.controller');
+const { createUser } = require('../controllers/user.controller');
 
 router.post("/", [verifyToken, isAnAdmin], createUser);
 

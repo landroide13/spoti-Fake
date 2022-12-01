@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 //DB
 const spoti1 = 'spotifake';
 
