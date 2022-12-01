@@ -5,8 +5,8 @@ const { createAudiobook, getAudiobook, getAudiobooks, deleteAudiobook, updateAud
 
 router.get('/', getAudiobooks);
 router.get('/:id', getAudiobook);
-router.post('/', [verifyToken, isAnAdmin], createAudiobook);
-router.delete('/:id',[verifyToken, isAnAdmin], deleteAudiobook);
-router.put('/:id', [verifyToken, isAnAdmin], updateAudiobook);
+router.post('/', verifyToken, createAudiobook);
+router.delete('/:id',verifyToken, deleteAudiobook);
+router.put('/:id', verifyToken, updateAudiobook);
 
 module.exports = router;
